@@ -1,9 +1,9 @@
 'use strict';
 
 var React = require('react');
-var PropTypes = require('prop-types');
-
+var createReactClass = require('create-react-class');
 var ReactNative = require('react-native');
+var PropTypes = require('prop-types');
 var {
   Dimensions,
   Text,
@@ -22,7 +22,7 @@ var DefaultViewPageIndicator = require('./DefaultViewPageIndicator');
 var deviceWidth = Dimensions.get('window').width;
 var ViewPagerDataSource = require('./ViewPagerDataSource');
 
-var ViewPager = React.createClass({
+var ViewPager = createReactClass({
   mixins: [TimerMixin],
 
   statics: {
